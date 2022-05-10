@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bytebank';
 
-  transferValues: any;
-  destiny: number;
+  transfersValues: any[] = [];
 
   transfer($event){
-    this.transferValues = $event;
+    const transfer = {...$event, date: new Date()};
+    this.transfersValues.push(transfer);
+    console.log(this.transfersValues);
   }
 }

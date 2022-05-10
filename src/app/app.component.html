@@ -1,4 +1,3 @@
 <app-new-transfer (whenTransferring)="transfer($event)"></app-new-transfer>
 
-<p>Valor: {{transferValues?.value}}</p>
-<p>Destino: {{transferValues?.destiny}}</p>
+<app-extract [transfersValues]="transfersValues"></app-extract>
