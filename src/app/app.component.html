@@ -1,3 +1,7 @@
-<app-new-transfer (whenTransferring)="transfer($event)"></app-new-transfer>
-
-<app-extract></app-extract>
+<header>
+  <a routerLink="extract"> Bytebank</a>
+  <a routerLink="new-transfer" routerLinkActive="ativo"> Nova transferência</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

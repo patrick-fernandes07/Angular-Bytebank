@@ -1,4 +1,7 @@
+import { Transfer } from './../models/transfer.model';
+import { TransferService } from './../services/transfer.service';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,17 +16,18 @@ export class NewTransferComponent {
   value: number;
   destiny: number;
 
+  constructor(private service: TransferService, private router: Router) {}
+
   transfer() {
-    const valueEmit = { value: this.value, destiny: this.destiny };
-    this.whenTransferring.emit(valueEmit);
-    this.clearInputs();
+    const valueEmit: Transfer = { value: this.value, destiny: this.destiny };
+
+    this.service.setTransfer(valueEmit).subscribe(result => {
+
+    this.router.navigateByUrl('extract');
+  }, (error) => console.error(error));
 
   }
 
-  clearInputs() {
-    this.value = 0;
-    this.destiny = 0;
-  }
 
 }
 

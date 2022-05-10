@@ -1,3 +1,4 @@
+import { Transfer } from './../models/transfer.model';
 import { TransferService } from './../services/transfer.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -14,7 +15,9 @@ export class ExtractComponent implements OnInit {
   constructor(private service: TransferService) {};
 
   ngOnInit(): void {
-    this.transfersValues = this.service.transfers;
+    this.service.all().subscribe((transfersValues: Transfer[]) => {
+      this.transfersValues = transfersValues;
+    })
   }
 
 }
