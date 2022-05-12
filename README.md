@@ -1,3 +1,7 @@
 # Bytebank
 
-Projeto com intuito de começar os estudos em Angular e aprimorar os conhecimentos
+Projeto de estudo inicial em Angular para aprender:
+* **Aprender a criar componentes Angular**
+* **Entender como transmitir informação entre componentes**
+* **Integrar dados com API’s REST**
+* **Transformar componentes em páginas**
