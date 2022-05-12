@@ -1,4 +1,4 @@
-# Bytebank
+# Projeto em Angular - Bytebank
 
 Projeto de estudo inicial em Angular para aprender:
 * **Aprender a criar componentes Angular**
